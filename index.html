@@ -1,0 +1,1750 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>One1Gym Ocaña — Gimnasio en Ocaña, Toledo</title>
+    <meta
+      name="description"
+      content="Gimnasio en Ocaña, Toledo. 525 m² de musculación, fuerza y cardio. Máquinas nuevas, entrenadores en sala, rutina personalizada incluida. Abierto 360 días al año."
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://www.one1gym.es/" />
+
+    <!-- Open Graph -->
+    <meta
+      property="og:title"
+      content="One1Gym Ocaña — Gimnasio en Ocaña, Toledo"
+    />
+    <meta
+      property="og:description"
+      content="525 m² de musculación, fuerza y cardio en Ocaña. Entrenadores en sala, rutina gratis, abierto 360 días al año."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.one1gym.es/" />
+
+    <!-- Schema.org LocalBusiness -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "HealthClub",
+        "name": "One1Gym Ocaña",
+        "description": "Gimnasio de musculación, fuerza y cardio en Ocaña, Toledo. 525 m², máquinas nuevas, entrenadores en sala, rutina personalizada incluida.",
+        "url": "https://www.one1gym.es/",
+        "telephone": "+34602100130",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Paraje del Silo, s/n",
+          "addressLocality": "Ocaña",
+          "postalCode": "45300",
+          "addressRegion": "Toledo",
+          "addressCountry": "ES"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 39.9497,
+          "longitude": -3.4989
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "06:00",
+            "closes": "22:30"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Saturday", "Sunday"],
+            "opens": "09:00",
+            "closes": "14:00"
+          }
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.8",
+          "reviewCount": "33",
+          "bestRating": "5"
+        },
+        "sameAs": ["https://www.instagram.com/one1gym.ocana"]
+      }
+    </script>
+
+    <!-- Google Fonts — Barlow Condensed + DM Sans + JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=DM+Sans:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* =============================================
+       TOKENS
+    ============================================= */
+      :root {
+        --c-black: #0d0d0d;
+        --c-surface: #1c1c1c;
+        --c-white: #f0efeb;
+        --c-iron: #b8b0a4;
+        --c-steel: #c8d6e0;
+
+        --f-display: "Barlow Condensed", sans-serif;
+        --f-body: "DM Sans", sans-serif;
+        --f-mono: "JetBrains Mono", monospace;
+
+        --space-xs: 8px;
+        --space-s: 16px;
+        --space-m: 32px;
+        --space-l: 64px;
+        --space-xl: 112px;
+
+        --radius: 2px;
+        --max-w: 1120px;
+      }
+
+      /* =============================================
+       RESET MÍNIMO
+    ============================================= */
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        background: var(--c-black);
+        color: var(--c-white);
+        font-family: var(--f-body);
+        font-size: 16px;
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+      }
+      img,
+      video {
+        display: block;
+        max-width: 100%;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      button {
+        cursor: pointer;
+        border: none;
+        background: none;
+        font: inherit;
+      }
+
+      /* =============================================
+       UTILIDADES
+    ============================================= */
+      .container {
+        width: 100%;
+        max-width: var(--max-w);
+        margin-inline: auto;
+        padding-inline: var(--space-m);
+      }
+      .label-eyebrow {
+        font-family: var(--f-mono);
+        font-size: 11px;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: var(--c-iron);
+      }
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+
+      /* =============================================
+       NAVEGACIÓN
+    ============================================= */
+      .nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        padding-block: var(--space-s);
+        background: rgba(13, 13, 13, 0.92);
+        backdrop-filter: blur(6px);
+        border-bottom: 1px solid #222;
+      }
+      .nav__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: var(--space-s);
+      }
+      .nav__logo {
+        font-family: var(--f-display);
+        font-size: 22px;
+        font-weight: 800;
+        letter-spacing: -0.01em;
+        color: var(--c-white);
+        line-height: 1;
+      }
+      .nav__logo span {
+        color: var(--c-steel);
+      }
+      .nav__links {
+        display: flex;
+        gap: var(--space-m);
+        list-style: none;
+      }
+      .nav__links a {
+        font-family: var(--f-mono);
+        font-size: 12px;
+        letter-spacing: 0.08em;
+        color: var(--c-iron);
+        transition: color 0.2s;
+      }
+      .nav__links a:hover {
+        color: var(--c-white);
+      }
+      .nav__cta {
+        font-family: var(--f-mono);
+        font-size: 12px;
+        letter-spacing: 0.06em;
+        padding: 9px 18px;
+        border: 1px solid var(--c-steel);
+        color: var(--c-steel);
+        transition:
+          background 0.2s,
+          color 0.2s;
+        border-radius: var(--radius);
+      }
+      .nav__cta:hover {
+        background: var(--c-steel);
+        color: var(--c-black);
+      }
+      @media (max-width: 680px) {
+        .nav__links {
+          display: none;
+        }
+      }
+
+      /* =============================================
+       HERO
+    ============================================= */
+      .hero {
+        min-height: 100svh;
+        display: grid;
+        grid-template-rows: 1fr auto;
+        padding-top: 80px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      /* Placeholder visual: reemplazar con <video> o <img> real */
+      .hero__media {
+        position: absolute;
+        inset: 0;
+        background: var(--c-surface);
+        overflow: hidden;
+      }
+      .hero__media::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to bottom,
+          rgba(13, 13, 13, 0.35) 0%,
+          rgba(13, 13, 13, 0.1) 40%,
+          rgba(13, 13, 13, 0.85) 100%
+        );
+      }
+
+      /* INSTRUCCIÓN PARA EL FOTÓGRAFO / CLIENTE:
+       Plano desde el extremo de la sala mirando hacia el fondo.
+       Hora: mediodía con luz natural entrando + flus del techo encendidos.
+       Encuadre: la perspectiva de la sala tiene que dominar la imagen (profundidad,
+       barras, discos en primer plano desenfocadas). Sin personas posando. */
+      .hero__media-placeholder {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: var(--f-mono);
+        font-size: 11px;
+        color: #444;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        flex-direction: column;
+        gap: 8px;
+        user-select: none;
+      }
+      .hero__media-placeholder::before {
+        content: "";
+        width: 48px;
+        height: 48px;
+        border: 1px solid #333;
+        border-radius: 50%;
+        display: block;
+        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23555' stroke-width='1.5'%3E%3Crect x='3' y='3' width='18' height='14' rx='1'/%3E%3Cpath d='M8 21h8M12 17v4'/%3E%3C/svg%3E")
+          center/24px no-repeat;
+      }
+
+      .hero__content {
+        position: relative;
+        z-index: 2;
+        padding-block: var(--space-l);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        min-height: calc(100svh - 80px);
+      }
+      .hero__eyebrow {
+        font-family: var(--f-mono);
+        font-size: 11px;
+        letter-spacing: 0.18em;
+        color: var(--c-steel);
+        text-transform: uppercase;
+        margin-bottom: var(--space-s);
+      }
+      .hero__title {
+        font-family: var(--f-display);
+        font-size: clamp(52px, 9vw, 110px);
+        font-weight: 800;
+        line-height: 0.92;
+        letter-spacing: -0.02em;
+        text-transform: uppercase;
+        max-width: 900px;
+      }
+      .hero__title em {
+        font-style: normal;
+        color: var(--c-steel);
+      }
+      .hero__sub {
+        margin-top: var(--space-m);
+        font-family: var(--f-body);
+        font-size: clamp(15px, 2vw, 18px);
+        color: var(--c-iron);
+        max-width: 480px;
+        line-height: 1.5;
+      }
+      .hero__actions {
+        margin-top: var(--space-m);
+        display: flex;
+        gap: var(--space-s);
+        flex-wrap: wrap;
+      }
+      .btn-primary {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 14px 28px;
+        background: var(--c-white);
+        color: var(--c-black);
+        font-family: var(--f-mono);
+        font-size: 13px;
+        font-weight: 500;
+        letter-spacing: 0.04em;
+        border-radius: var(--radius);
+        transition:
+          background 0.2s,
+          color 0.2s;
+      }
+      .btn-primary:hover {
+        background: var(--c-steel);
+      }
+      .btn-ghost {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 14px 28px;
+        border: 1px solid #444;
+        color: var(--c-iron);
+        font-family: var(--f-mono);
+        font-size: 13px;
+        letter-spacing: 0.04em;
+        border-radius: var(--radius);
+        transition:
+          border-color 0.2s,
+          color 0.2s;
+      }
+      .btn-ghost:hover {
+        border-color: var(--c-white);
+        color: var(--c-white);
+      }
+      .hero__scroll-hint {
+        position: absolute;
+        bottom: var(--space-m);
+        right: var(--space-m);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        z-index: 2;
+      }
+      .hero__scroll-hint span {
+        font-family: var(--f-mono);
+        font-size: 10px;
+        letter-spacing: 0.12em;
+        color: #555;
+        text-transform: uppercase;
+        writing-mode: vertical-rl;
+      }
+      .scroll-line {
+        width: 1px;
+        height: 48px;
+        background: linear-gradient(to bottom, #555, transparent);
+        animation: scrollline 1.8s ease-in-out infinite;
+      }
+      @keyframes scrollline {
+        0% {
+          transform: scaleY(0);
+          transform-origin: top;
+        }
+        50% {
+          transform: scaleY(1);
+          transform-origin: top;
+        }
+        51% {
+          transform: scaleY(1);
+          transform-origin: bottom;
+        }
+        100% {
+          transform: scaleY(0);
+          transform-origin: bottom;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .scroll-line {
+          animation: none;
+        }
+      }
+
+      /* =============================================
+       STATS — FRANJA DE DATOS
+    ============================================= */
+      .stats {
+        background: var(--c-surface);
+        border-top: 1px solid #2a2a2a;
+        border-bottom: 1px solid #2a2a2a;
+        padding-block: var(--space-m);
+      }
+      .stats__grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1px;
+        background: #2a2a2a;
+      }
+      .stats__item {
+        background: var(--c-surface);
+        padding: var(--space-m) var(--space-s);
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+      .stats__number {
+        font-family: var(--f-display);
+        font-size: clamp(36px, 5vw, 60px);
+        font-weight: 800;
+        line-height: 1;
+        letter-spacing: -0.02em;
+        color: var(--c-white);
+      }
+      .stats__number span {
+        font-size: 0.5em;
+        color: var(--c-steel);
+        font-weight: 700;
+      }
+      .stats__label {
+        font-family: var(--f-mono);
+        font-size: 10px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--c-iron);
+      }
+      @media (max-width: 600px) {
+        .stats__grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      /* =============================================
+       SECCIÓN — ESTRUCTURA BASE
+    ============================================= */
+      .section {
+        padding-block: var(--space-xl);
+      }
+      .section--alt {
+        background: var(--c-surface);
+      }
+      .section__header {
+        margin-bottom: var(--space-l);
+      }
+      .section__title {
+        font-family: var(--f-display);
+        font-size: clamp(38px, 6vw, 72px);
+        font-weight: 800;
+        line-height: 0.95;
+        letter-spacing: -0.02em;
+        text-transform: uppercase;
+        margin-top: var(--space-xs);
+      }
+      .section__body {
+        font-size: clamp(15px, 1.8vw, 17px);
+        color: var(--c-iron);
+        line-height: 1.65;
+        max-width: 520px;
+      }
+
+      /* =============================================
+       QUÉ ES ONE1GYM
+    ============================================= */
+      .about__grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-l);
+        align-items: start;
+      }
+      .about__text p {
+        font-size: clamp(15px, 1.8vw, 17px);
+        color: var(--c-iron);
+        line-height: 1.65;
+        margin-bottom: var(--space-s);
+      }
+      .about__text p:last-child {
+        margin-bottom: 0;
+      }
+      .about__text strong {
+        color: var(--c-white);
+        font-weight: 500;
+      }
+
+      /* INSTRUCCIÓN FOTO — panel derecho del about:
+       Foto vertical de la zona de pesas libres.
+       Encuadre: desde rodilla, mirando hacia arriba, discos en primer plano,
+       barras al fondo. Luz contrastada (ventana lateral + fluorescente).
+       Sin personas. La máquina habla. */
+      .about__media {
+        aspect-ratio: 3/4;
+        background: #222;
+        border-radius: var(--radius);
+        overflow: hidden;
+        position: relative;
+      }
+      .about__media-placeholder {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: var(--f-mono);
+        font-size: 10px;
+        color: #3a3a3a;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        text-align: center;
+        padding: var(--space-s);
+      }
+      @media (max-width: 680px) {
+        .about__grid {
+          grid-template-columns: 1fr;
+        }
+        .about__media {
+          aspect-ratio: 4/3;
+          order: -1;
+        }
+      }
+
+      /* =============================================
+       RUTINA PERSONALIZADA — DESTAQUE
+    ============================================= */
+      .routine {
+        background: var(--c-steel);
+        color: var(--c-black);
+        padding-block: var(--space-xl);
+      }
+      .routine .section__title {
+        color: var(--c-black);
+      }
+      .routine__inner {
+        max-width: 640px;
+      }
+      .routine__body {
+        font-size: clamp(15px, 1.8vw, 17px);
+        color: rgba(13, 13, 13, 0.75);
+        line-height: 1.65;
+      }
+      .routine__body strong {
+        color: var(--c-black);
+      }
+      .routine__detail {
+        font-family: var(--f-mono);
+        font-size: 13px;
+        color: rgba(13, 13, 13, 0.6);
+        letter-spacing: 0.04em;
+        margin-top: var(--space-s);
+        padding-top: var(--space-s);
+        border-top: 1px solid rgba(13, 13, 13, 0.2);
+      }
+
+      /* =============================================
+       PRECIO
+    ============================================= */
+      .pricing {
+        padding-block: var(--space-xl);
+      }
+      .pricing__card {
+        max-width: 560px;
+        border: 1px solid #2a2a2a;
+        border-radius: var(--radius);
+        background: var(--c-surface);
+        overflow: hidden;
+      }
+      .pricing__header {
+        padding: var(--space-m);
+        border-bottom: 1px solid #2a2a2a;
+        display: flex;
+        align-items: baseline;
+        gap: 12px;
+      }
+      .pricing__amount {
+        font-family: var(--f-display);
+        font-size: clamp(52px, 8vw, 88px);
+        font-weight: 800;
+        line-height: 1;
+        letter-spacing: -0.03em;
+        color: var(--c-white);
+      }
+      .pricing__period {
+        font-family: var(--f-mono);
+        font-size: 13px;
+        color: var(--c-iron);
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+      .pricing__rows {
+        padding: var(--space-m);
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+      }
+      .pricing__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        padding-block: 12px;
+        border-bottom: 1px solid #222;
+        font-family: var(--f-mono);
+        font-size: 13px;
+      }
+      .pricing__row:last-child {
+        border-bottom: none;
+      }
+      .pricing__row-label {
+        color: var(--c-iron);
+        letter-spacing: 0.04em;
+      }
+      .pricing__row-value {
+        color: var(--c-white);
+      }
+      .pricing__row-value.highlight {
+        color: var(--c-steel);
+      }
+      .pricing__cta {
+        display: block;
+        margin: 0 var(--space-m) var(--space-m);
+        padding: 14px;
+        text-align: center;
+        background: var(--c-white);
+        color: var(--c-black);
+        font-family: var(--f-mono);
+        font-size: 13px;
+        font-weight: 500;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        border-radius: var(--radius);
+        transition: background 0.2s;
+      }
+      .pricing__cta:hover {
+        background: var(--c-steel);
+      }
+      .pricing__note {
+        font-family: var(--f-mono);
+        font-size: 11px;
+        letter-spacing: 0.08em;
+        color: #444;
+        text-transform: uppercase;
+        text-align: center;
+        padding: 0 var(--space-m) var(--space-m);
+      }
+
+      /* =============================================
+       INSTALACIONES — GALERÍA
+    ============================================= */
+      .gallery__grid {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: 260px 260px;
+        gap: var(--space-xs);
+        margin-top: var(--space-m);
+      }
+      .gallery__item {
+        background: var(--c-surface);
+        border-radius: var(--radius);
+        overflow: hidden;
+        position: relative;
+      }
+      /* Layout asimétrico real */
+      .gallery__item:nth-child(1) {
+        grid-column: span 7;
+        grid-row: span 2;
+      }
+      .gallery__item:nth-child(2) {
+        grid-column: span 5;
+      }
+      .gallery__item:nth-child(3) {
+        grid-column: span 5;
+      }
+
+      .gallery__caption {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: var(--space-xs) var(--space-s);
+        background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+        font-family: var(--f-mono);
+        font-size: 10px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--c-iron);
+      }
+      .gallery__placeholder {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: var(--f-mono);
+        font-size: 10px;
+        color: #2a2a2a;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        flex-direction: column;
+        gap: 6px;
+        text-align: center;
+        padding: var(--space-s);
+      }
+      @media (max-width: 760px) {
+        .gallery__grid {
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: auto;
+          aspect-ratio: unset;
+        }
+        .gallery__item:nth-child(1) {
+          grid-column: span 2;
+          aspect-ratio: 16/9;
+        }
+        .gallery__item:nth-child(2),
+        .gallery__item:nth-child(3) {
+          grid-column: span 1;
+          aspect-ratio: 4/3;
+        }
+      }
+
+      /* =============================================
+       HORARIO — PANEL TERMINAL (ELEMENTO FIRMA)
+    ============================================= */
+      .schedule {
+        padding-block: var(--space-xl);
+      }
+      .schedule__inner {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-xl);
+        align-items: start;
+      }
+      .schedule__panel {
+        background: var(--c-surface);
+        border: 1px solid #2a2a2a;
+        border-radius: var(--radius);
+        padding: var(--space-m);
+        font-family: var(--f-mono);
+      }
+      .schedule__panel-header {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: var(--space-m);
+        padding-bottom: var(--space-s);
+        border-bottom: 1px solid #2a2a2a;
+      }
+      .terminal-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+      }
+      .td-red {
+        background: #ff5f57;
+      }
+      .td-yell {
+        background: #ffbd2e;
+      }
+      .td-green {
+        background: #28c840;
+      }
+      .schedule__panel-title {
+        font-size: 11px;
+        letter-spacing: 0.1em;
+        color: var(--c-iron);
+        text-transform: uppercase;
+        margin-left: 4px;
+      }
+      .schedule__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        padding-block: 10px;
+        border-bottom: 1px solid #222;
+        font-size: 13px;
+      }
+      .schedule__row:last-child {
+        border-bottom: none;
+      }
+      .schedule__day {
+        color: var(--c-iron);
+        letter-spacing: 0.06em;
+      }
+      .schedule__time {
+        color: var(--c-steel);
+        font-size: 14px;
+      }
+      .schedule__badge {
+        display: inline-block;
+        font-size: 10px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        padding: 3px 8px;
+        border: 1px solid var(--c-steel);
+        color: var(--c-steel);
+        border-radius: 1px;
+        margin-left: 8px;
+      }
+      .schedule__360 {
+        font-family: var(--f-display);
+        font-size: clamp(80px, 14vw, 160px);
+        font-weight: 800;
+        line-height: 0.88;
+        letter-spacing: -0.04em;
+        text-transform: uppercase;
+        margin-top: var(--space-xs);
+      }
+      .schedule__360 span {
+        display: block;
+        color: var(--c-iron);
+        font-size: 0.45em;
+        letter-spacing: 0;
+      }
+      .schedule__map-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin-top: var(--space-m);
+        font-family: var(--f-mono);
+        font-size: 12px;
+        letter-spacing: 0.08em;
+        color: var(--c-steel);
+        text-decoration: underline;
+        text-underline-offset: 4px;
+      }
+      .schedule__parking {
+        margin-top: var(--space-s);
+        font-family: var(--f-mono);
+        font-size: 11px;
+        letter-spacing: 0.06em;
+        color: #444;
+        text-transform: uppercase;
+      }
+      @media (max-width: 760px) {
+        .schedule__inner {
+          grid-template-columns: 1fr;
+          gap: var(--space-l);
+        }
+      }
+
+      /* =============================================
+       RESEÑAS
+    ============================================= */
+      .reviews {
+        background: var(--c-surface);
+        padding-block: var(--space-xl);
+      }
+      .reviews__rating {
+        display: flex;
+        align-items: baseline;
+        gap: var(--space-s);
+        margin-bottom: var(--space-l);
+      }
+      .reviews__score {
+        font-family: var(--f-display);
+        font-size: clamp(72px, 12vw, 120px);
+        font-weight: 800;
+        line-height: 1;
+        letter-spacing: -0.04em;
+      }
+      .reviews__meta {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+      .reviews__stars {
+        display: flex;
+        gap: 3px;
+      }
+      .star {
+        width: 18px;
+        height: 18px;
+        fill: var(--c-steel);
+      }
+      .reviews__count {
+        font-family: var(--f-mono);
+        font-size: 11px;
+        letter-spacing: 0.1em;
+        color: var(--c-iron);
+        text-transform: uppercase;
+      }
+      .reviews__grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--space-s);
+      }
+      .review-card {
+        background: #222;
+        border: 1px solid #2a2a2a;
+        border-radius: var(--radius);
+        padding: var(--space-m);
+      }
+      .review-card__text {
+        font-size: 14px;
+        line-height: 1.6;
+        color: var(--c-iron);
+        margin-bottom: var(--space-s);
+      }
+      .review-card__author {
+        font-family: var(--f-mono);
+        font-size: 11px;
+        letter-spacing: 0.08em;
+        color: #555;
+        text-transform: uppercase;
+      }
+      .reviews__google-link {
+        margin-top: var(--space-m);
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-family: var(--f-mono);
+        font-size: 12px;
+        letter-spacing: 0.08em;
+        color: var(--c-iron);
+        text-decoration: underline;
+        text-underline-offset: 4px;
+        transition: color 0.2s;
+      }
+      .reviews__google-link:hover {
+        color: var(--c-white);
+      }
+      @media (max-width: 760px) {
+        .reviews__grid {
+          grid-template-columns: 1fr;
+        }
+      }
+      @media (min-width: 761px) and (max-width: 960px) {
+        .reviews__grid {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      /* =============================================
+       CONTACTO / CTA FINAL
+    ============================================= */
+      .contact {
+        padding-block: var(--space-xl);
+      }
+      .contact__inner {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-xl);
+        align-items: start;
+      }
+      .contact__title {
+        font-family: var(--f-display);
+        font-size: clamp(38px, 6vw, 72px);
+        font-weight: 800;
+        line-height: 0.95;
+        letter-spacing: -0.02em;
+        text-transform: uppercase;
+        margin-top: var(--space-xs);
+      }
+      .contact__channels {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-s);
+      }
+      .contact__link {
+        display: flex;
+        align-items: center;
+        gap: var(--space-s);
+        padding: var(--space-s) var(--space-m);
+        border: 1px solid #2a2a2a;
+        border-radius: var(--radius);
+        background: var(--c-surface);
+        transition:
+          border-color 0.2s,
+          background 0.2s;
+      }
+      .contact__link:hover {
+        border-color: var(--c-steel);
+        background: #1a2228;
+      }
+      .contact__link-icon {
+        width: 20px;
+        height: 20px;
+        fill: var(--c-steel);
+        flex-shrink: 0;
+      }
+      .contact__link-label {
+        font-family: var(--f-mono);
+        font-size: 12px;
+        letter-spacing: 0.08em;
+        color: var(--c-iron);
+        text-transform: uppercase;
+      }
+      .contact__link-value {
+        font-family: var(--f-body);
+        font-size: 15px;
+        color: var(--c-white);
+        font-weight: 500;
+      }
+      .contact__link-texts {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+      }
+      .contact__address {
+        margin-top: var(--space-l);
+        padding-top: var(--space-m);
+        border-top: 1px solid #222;
+      }
+      .contact__address-label {
+        font-family: var(--f-mono);
+        font-size: 11px;
+        letter-spacing: 0.12em;
+        color: var(--c-iron);
+        text-transform: uppercase;
+        margin-bottom: 6px;
+      }
+      .contact__address-text {
+        font-size: 15px;
+        color: var(--c-white);
+        line-height: 1.5;
+      }
+      @media (max-width: 760px) {
+        .contact__inner {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* =============================================
+       FOOTER
+    ============================================= */
+      .footer {
+        background: var(--c-surface);
+        border-top: 1px solid #222;
+        padding-block: var(--space-m);
+      }
+      .footer__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: var(--space-m);
+        flex-wrap: wrap;
+      }
+      .footer__logo {
+        font-family: var(--f-display);
+        font-size: 18px;
+        font-weight: 800;
+        color: #333;
+      }
+      .footer__logo span {
+        color: #3a4e5a;
+      }
+      .footer__copy {
+        font-family: var(--f-mono);
+        font-size: 11px;
+        letter-spacing: 0.08em;
+        color: #444;
+        text-transform: uppercase;
+      }
+      .footer__ig {
+        font-family: var(--f-mono);
+        font-size: 11px;
+        letter-spacing: 0.08em;
+        color: #444;
+        text-transform: uppercase;
+        transition: color 0.2s;
+      }
+      .footer__ig:hover {
+        color: var(--c-iron);
+      }
+
+      /* =============================================
+       SCROLL REVEAL (sutil, solo opacidad)
+    ============================================= */
+      .reveal {
+        opacity: 0;
+        transform: translateY(16px);
+        transition:
+          opacity 0.55s ease,
+          transform 0.55s ease;
+      }
+      .reveal.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .reveal {
+          opacity: 1;
+          transform: none;
+          transition: none;
+        }
+      }
+
+      /* =============================================
+       FOCUS VISIBLE
+    ============================================= */
+      :focus-visible {
+        outline: 2px solid var(--c-steel);
+        outline-offset: 3px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- ====== NAVEGACIÓN ====== -->
+    <header role="banner">
+      <nav class="nav" aria-label="Navegación principal">
+        <div class="container nav__inner">
+          <a
+            href="#inicio"
+            class="nav__logo"
+            aria-label="One1Gym Ocaña — inicio"
+          >
+            ONE<span>1</span>GYM
+          </a>
+          <ul class="nav__links" role="list">
+            <li><a href="#instalaciones">Instalaciones</a></li>
+            <li><a href="#horario">Horario</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+          <a
+            href="#precio"
+            class="nav__cta"
+            aria-label="Hazte socio — 29,90€ al mes"
+          >
+            Hazte socio · 29,90€/mes
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- ====== HERO ====== -->
+    <main id="inicio">
+      <section class="hero" aria-label="Portada">
+        <div class="hero__media" aria-hidden="true">
+          <!-- REEMPLAZAR ESTE DIV con:
+             <video autoplay muted loop playsinline poster="img/hero-poster.jpg">
+               <source src="img/hero.mp4" type="video/mp4">
+             </video>
+             O bien: <img src="img/hero.jpg" alt="" />
+
+             DIRECCIÓN DE ARTE: plano angular desde el extremo de la sala
+             mirando al fondo. Pesas en primer plano desenfocadas. Luz fría
+             de fluorescentes + luz natural lateral. Sin personas posando. -->
+          <div class="hero__media-placeholder">
+            <span>Foto/vídeo real de la sala</span>
+            <span>Plano desde el fondo · luz industrial</span>
+          </div>
+        </div>
+
+        <div class="hero__content container">
+          <p class="hero__eyebrow">Ocaña, Toledo — Paraje del Silo</p>
+          <h1 class="hero__title">
+            Donde se<br />
+            entrena <em>en serio.</em>
+          </h1>
+          <p class="hero__sub">
+            525 m² en Ocaña. Máquinas nuevas, entrenadores que saben lo que
+            hacen y aparcamiento donde cabe tu coche. Sin postureo.
+          </p>
+          <div class="hero__actions">
+            <a
+              href="https://wa.me/34602100130?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20One1Gym"
+              class="btn-primary"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Pregunta sin compromiso
+            </a>
+            <a href="#instalaciones" class="btn-ghost">Ver instalaciones</a>
+          </div>
+        </div>
+
+        <div class="hero__scroll-hint" aria-hidden="true">
+          <div class="scroll-line"></div>
+          <span>Scroll</span>
+        </div>
+      </section>
+
+      <!-- ====== STATS ====== -->
+      <section class="stats" aria-label="Cifras del gimnasio">
+        <div class="container">
+          <div class="stats__grid">
+            <div class="stats__item reveal">
+              <div class="stats__number">525<span>m²</span></div>
+              <div class="stats__label">Sala total</div>
+            </div>
+            <div class="stats__item reveal">
+              <div class="stats__number">360<span>días</span></div>
+              <div class="stats__label">Abierto al año</div>
+            </div>
+            <div class="stats__item reveal">
+              <div class="stats__number">4.8<span>/5</span></div>
+              <div class="stats__label">En Google (+30 reseñas)</div>
+            </div>
+            <div class="stats__item reveal">
+              <div class="stats__number">0<span>€</span></div>
+              <div class="stats__label">Tu rutina personalizada</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====== QUÉ ES ONE1GYM ====== -->
+      <section class="section" aria-labelledby="about-title">
+        <div class="container">
+          <div class="about__grid">
+            <div>
+              <div class="section__header">
+                <p class="label-eyebrow">El gimnasio</p>
+                <h2 class="section__title reveal" id="about-title">
+                  Espacio<br />de verdad.
+                </h2>
+              </div>
+              <div class="about__text reveal">
+                <p>
+                  One1Gym es musculación, fuerza y cardio en 525 m² diseñados
+                  para que puedas entrenar
+                  <strong>sin esperar máquinas</strong> y sin que te sientas en
+                  un pasillo.
+                </p>
+                <p>
+                  Los entrenadores están en sala durante todo el horario. No son
+                  comerciales. Saben lo que hacen y te dejan trabajar cuando no
+                  los necesitas, y están ahí cuando sí.
+                </p>
+                <p>
+                  Abierto todos los días menos cinco al año. Porque la
+                  constancia no entiende de fines de semana ni de festivos.
+                </p>
+              </div>
+            </div>
+
+            <div class="about__media reveal" aria-hidden="true">
+              <!-- REEMPLAZAR con <img src="img/sala-pesas.jpg" alt="Zona de pesas libres de One1Gym" />
+
+                 DIRECCIÓN DE ARTE: vertical (retrato).
+                 Desde rodilla, mirando hacia barras y discos.
+                 Luz contrastada: ventana + fluorescente.
+                 Sin personas. La sala habla sola. -->
+              <div class="about__media-placeholder">
+                Foto vertical<br />Zona de pesas libres<br /><br />
+                Desde rodilla · contraluz<br />barras y discos en foco
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====== RUTINA PERSONALIZADA ====== -->
+      <section class="routine" aria-labelledby="routine-title">
+        <div class="container">
+          <div class="routine__inner">
+            <p class="label-eyebrow" style="color: rgba(13, 13, 13, 0.5)">
+              Incluido en tu cuota
+            </p>
+            <h2
+              class="section__title reveal"
+              id="routine-title"
+              style="color: var(--c-black); margin-top: var(--space-xs)"
+            >
+              Tu rutina,<br />sin coste extra.
+            </h2>
+            <div class="routine__body reveal">
+              <p>
+                Si llegas sin saber por dónde empezar, o quieres cambiar lo que
+                estás haciendo, un entrenador te arma la rutina.
+                <strong>Incluido.</strong>
+                Sin contratarlo aparte. Sin planes premium. Sin pagarla por
+                separado.
+              </p>
+              <p style="margin-top: var(--space-s)">
+                Funciona porque te conocen, saben cómo entrenas y pueden ajustar
+                lo que necesitas cuando lo necesitas.
+              </p>
+            </div>
+            <p class="routine__detail">
+              Pídela cuando quieras · Sin cita previa necesaria
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====== PRECIO ====== -->
+      <section
+        class="section pricing"
+        id="precio"
+        aria-labelledby="pricing-title"
+      >
+        <div class="container">
+          <div class="section__header">
+            <p class="label-eyebrow">Lo que cuesta</p>
+            <h2 class="section__title reveal" id="pricing-title">
+              Sin letras<br />pequeñas.
+            </h2>
+          </div>
+          <div class="pricing__card reveal">
+            <div class="pricing__header">
+              <div class="pricing__amount" aria-label="29,90 euros al mes">
+                29,90€
+              </div>
+              <div class="pricing__period">/ mes</div>
+            </div>
+            <div class="pricing__rows">
+              <div class="pricing__row">
+                <span class="pricing__row-label">Acceso total a la sala</span>
+                <span class="pricing__row-value highlight">Incluido</span>
+              </div>
+              <div class="pricing__row">
+                <span class="pricing__row-label">Rutina personalizada</span>
+                <span class="pricing__row-value highlight">Incluida</span>
+              </div>
+              <div class="pricing__row">
+                <span class="pricing__row-label">Entrenadores en sala</span>
+                <span class="pricing__row-value highlight">Incluidos</span>
+              </div>
+              <div class="pricing__row">
+                <span class="pricing__row-label"
+                  >Llave de acceso (solo nuevos socios)</span
+                >
+                <span class="pricing__row-value">5€ · pago único</span>
+              </div>
+            </div>
+            <a
+              href="https://wa.me/34602100130?text=Hola%2C%20quiero%20hacerme%20socio%20de%20One1Gym"
+              class="pricing__cta"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Contactar para hacerse socio de One1Gym"
+            >
+              Quiero hacerme socio
+            </a>
+            <p class="pricing__note">Sin permanencia · Sin matrícula</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====== INSTALACIONES ====== -->
+      <section
+        class="section"
+        id="instalaciones"
+        aria-labelledby="gallery-title"
+      >
+        <div class="container">
+          <div class="section__header">
+            <p class="label-eyebrow">Las instalaciones</p>
+            <h2 class="section__title reveal" id="gallery-title">
+              Máquinas<br />que se ven.
+            </h2>
+            <p class="section__body reveal" style="margin-top: var(--space-s)">
+              No hay filtros. Lo que ves es lo que hay. Ven a verlo en persona o
+              pide fotos por Instagram antes de decidirte.
+            </p>
+          </div>
+
+          <div class="gallery__grid reveal">
+            <!-- FOTO 1 — Grande, vertical doble altura
+               Plano general de la sala completa desde la entrada.
+               Perspectiva amplia que muestre los 525 m².
+               Hora: tarde, todas las luces encendidas, sala con actividad
+               natural (no posada). Nadie mirando a cámara. -->
+            <div class="gallery__item">
+              <div class="gallery__placeholder">
+                Foto principal<br />Sala completa · plano general<br />Desde la
+                entrada · luces encendidas
+              </div>
+              <div class="gallery__caption">Sala principal — 525 m²</div>
+            </div>
+
+            <!-- FOTO 2 — Zona cardio
+               Encuadre: fila de cintas o elípticas desde el lateral.
+               Luz: fluorescente + reflejo en el suelo de epoxi.
+               Sin personas. -->
+            <div class="gallery__item">
+              <div class="gallery__placeholder">
+                Foto zona cardio<br />Lateral · epoxi reflejado
+              </div>
+              <div class="gallery__caption">Zona cardio</div>
+            </div>
+
+            <!-- FOTO 3 — Zona de fuerza / racks
+               Encuadre frontal bajo. Racks y jaulas en segundo plano,
+               discos en primer plano. Luz de cabeza contrastada. -->
+            <div class="gallery__item">
+              <div class="gallery__placeholder">
+                Foto zona fuerza<br />Racks · discos primer plano
+              </div>
+              <div class="gallery__caption">Zona de fuerza libre</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====== HORARIO (ELEMENTO FIRMA) ====== -->
+      <section
+        class="section section--alt schedule"
+        id="horario"
+        aria-labelledby="schedule-title"
+      >
+        <div class="container">
+          <div class="schedule__inner">
+            <div>
+              <p class="label-eyebrow">Cuándo puedes venir</p>
+              <div class="schedule__360 reveal" aria-label="360 días al año">
+                360
+                <span>días/año</span>
+              </div>
+              <a
+                href="https://maps.google.com/?q=Paraje+del+Silo+Oca%C3%B1a+Toledo"
+                class="schedule__map-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Ver en Google Maps"
+              >
+                ↗ Paraje del Silo, s/n · Ocaña, Toledo
+              </a>
+              <p class="schedule__parking">Aparcamiento gratuito y fácil</p>
+            </div>
+
+            <div>
+              <h2 class="sr-only" id="schedule-title">Horario</h2>
+              <div
+                class="schedule__panel reveal"
+                role="region"
+                aria-label="Horario del gimnasio"
+              >
+                <div class="schedule__panel-header" aria-hidden="true">
+                  <div class="terminal-dot td-red"></div>
+                  <div class="terminal-dot td-yell"></div>
+                  <div class="terminal-dot td-green"></div>
+                  <span class="schedule__panel-title"
+                    >one1gym / horario.sh</span
+                  >
+                </div>
+
+                <div class="schedule__row">
+                  <span class="schedule__day">Lunes – Viernes</span>
+                  <span class="schedule__time">06:00 – 22:30</span>
+                </div>
+                <div class="schedule__row">
+                  <span class="schedule__day">Sábado</span>
+                  <span class="schedule__time">09:00 – 14:00</span>
+                </div>
+                <div class="schedule__row">
+                  <span class="schedule__day">Domingo</span>
+                  <span class="schedule__time">09:00 – 14:00</span>
+                </div>
+                <div class="schedule__row">
+                  <span class="schedule__day">
+                    Festivos
+                    <span class="schedule__badge">abiertos</span>
+                  </span>
+                  <span class="schedule__time">09:00 – 14:00</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====== RESEÑAS ====== -->
+      <section class="reviews" aria-labelledby="reviews-title">
+        <div class="container">
+          <div class="reviews__rating">
+            <div class="reviews__score" aria-label="4.8 sobre 5">4.8</div>
+            <div class="reviews__meta">
+              <div class="reviews__stars" aria-hidden="true">
+                <svg class="star" viewBox="0 0 24 24">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  />
+                </svg>
+                <svg class="star" viewBox="0 0 24 24">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  />
+                </svg>
+                <svg class="star" viewBox="0 0 24 24">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  />
+                </svg>
+                <svg class="star" viewBox="0 0 24 24">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  />
+                </svg>
+                <svg class="star" viewBox="0 0 24 24">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  />
+                </svg>
+              </div>
+              <p class="reviews__count">+30 reseñas en Google</p>
+            </div>
+          </div>
+
+          <h2 class="sr-only" id="reviews-title">Lo que dicen los socios</h2>
+
+          <!-- INSTRUCCIÓN: Pedir al cliente las reseñas reales de Google
+             y reemplazar estos 3 bloques con texto + nombre reales.
+             Si no se tienen aún, dejar el bloque de puntuación + enlace
+             y quitar las tarjetas hasta tenerlas. -->
+          <div class="reviews__grid">
+            <article class="review-card reveal">
+              <p class="review-card__text">
+                "Maquinaria buenísima, muy nueva, muchísimo espacio, fácil para
+                aparcar y la atención de los monitores inmejorable."
+              </p>
+              <p class="review-card__author">— Reseña real · Google</p>
+            </article>
+            <article class="review-card reveal">
+              <p class="review-card__text">
+                "El mejor gimnasio de Ocaña sin duda. Buena ventilación, amplio
+                y buenas máquinas."
+              </p>
+              <p class="review-card__author">— Reseña real · Google</p>
+            </article>
+            <article class="review-card reveal">
+              <p class="review-card__text">
+                "Grandes espacios, maquinaria nueva y variada, trato personal y
+                profesional. Te sientes motivado por el ambiente."
+              </p>
+              <p class="review-card__author">— Reseña real · Google</p>
+            </article>
+          </div>
+
+          <a
+            href="https://maps.google.com/?q=One1Gym+Oca%C3%B1a"
+            class="reviews__google-link"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Ver todas las reseñas en Google"
+          >
+            Ver las +30 reseñas en Google ↗
+          </a>
+        </div>
+      </section>
+
+      <!-- ====== CONTACTO ====== -->
+      <section
+        class="section contact"
+        id="contacto"
+        aria-labelledby="contact-title"
+      >
+        <div class="container">
+          <div class="contact__inner">
+            <div>
+              <p class="label-eyebrow">Ven o escríbenos</p>
+              <h2
+                class="section__title contact__title reveal"
+                id="contact-title"
+              >
+                Cualquier<br />pregunta.
+              </h2>
+              <p
+                class="section__body reveal"
+                style="margin-top: var(--space-m)"
+              >
+                Sin formularios eternos. Llama, manda un WhatsApp o pásate y te
+                enseñamos el gimnasio. No hay nada que esconder.
+              </p>
+            </div>
+
+            <div class="contact__channels reveal">
+              <!-- WhatsApp -->
+              <a
+                href="https://wa.me/34602100130?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20One1Gym"
+                class="contact__link"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Contactar por WhatsApp"
+              >
+                <svg
+                  class="contact__link-icon"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.464 3.488"
+                  />
+                </svg>
+                <div class="contact__link-texts">
+                  <span class="contact__link-label">WhatsApp</span>
+                  <span class="contact__link-value">602 10 01 30</span>
+                </div>
+              </a>
+
+              <!-- Teléfono -->
+              <a
+                href="tel:+34602100130"
+                class="contact__link"
+                aria-label="Llamar al gimnasio"
+              >
+                <svg
+                  class="contact__link-icon"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"
+                  />
+                </svg>
+                <div class="contact__link-texts">
+                  <span class="contact__link-label">Teléfono</span>
+                  <span class="contact__link-value">602 10 01 30</span>
+                </div>
+              </a>
+
+              <!-- Instagram -->
+              <a
+                href="https://www.instagram.com/one1gym.ocana"
+                class="contact__link"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Ver Instagram de One1Gym"
+              >
+                <svg
+                  class="contact__link-icon"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"
+                  />
+                </svg>
+                <div class="contact__link-texts">
+                  <span class="contact__link-label">Instagram</span>
+                  <span class="contact__link-value">@one1gym.ocana</span>
+                </div>
+              </a>
+
+              <div class="contact__address">
+                <p class="contact__address-label">Dónde estamos</p>
+                <address
+                  class="contact__address-text"
+                  style="font-style: normal"
+                >
+                  Paraje del Silo, s/n<br />
+                  45300 Ocaña, Toledo
+                </address>
+                <a
+                  href="https://maps.google.com/?q=Paraje+del+Silo+Oca%C3%B1a+Toledo"
+                  style="
+                    display: inline-block;
+                    margin-top: 12px;
+                    font-family: var(--f-mono);
+                    font-size: 12px;
+                    letter-spacing: 0.08em;
+                    color: var(--c-iron);
+                    text-decoration: underline;
+                    text-underline-offset: 4px;
+                  "
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Cómo llegar en Google Maps"
+                >
+                  Cómo llegar ↗
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ====== FOOTER ====== -->
+    <footer class="footer" role="contentinfo">
+      <div class="container footer__inner">
+        <div class="footer__logo" aria-label="One1Gym">
+          ONE<span>1</span>GYM
+        </div>
+        <p class="footer__copy">Ocaña, Toledo · Abierto 360 días</p>
+        <a
+          href="https://www.instagram.com/one1gym.ocana"
+          class="footer__ig"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram de One1Gym"
+        >
+          @one1gym.ocana
+        </a>
+      </div>
+    </footer>
+
+    <!-- ====== JS MÍNIMO: reveal en scroll ====== -->
+    <script>
+      (function () {
+        if (!("IntersectionObserver" in window)) return;
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.12 },
+        );
+
+        document
+          .querySelectorAll(".reveal")
+          .forEach((el) => observer.observe(el));
+      })();
+    </script>
+  </body>
+</html>
